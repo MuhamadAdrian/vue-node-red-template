@@ -1,3 +1,5 @@
 <template>
-  <p>Another Page</p>
+  <p class="text-5xl">
+    Another Page
+  </p>
 </template>

@@ -1,10 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { setupLayouts } from 'virtual:generated-layouts'
-import routes from '~pages'
+import generatedRoutes from 'virtual:generated-pages'
+
+const routes = setupLayouts(generatedRoutes)
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: setupLayouts(routes)
+  routes,
 })
 
 export default router

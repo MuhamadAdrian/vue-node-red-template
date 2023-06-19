@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  import { inject } from 'vue'
-  import IData from '../interface/IData'
-  // const send2NR = inject('send2NR') as (topic: string, payload:string) => void;
+import { inject } from 'vue'
+import type IData from '../interface/IData'
 
-  const asyncData = inject('asyncData') as IData;
+// const send2NR = inject('send2NR') as (topic: string, payload:string) => void;
+
+const asyncData = inject('asyncData') as IData
 </script>
 
 <template>

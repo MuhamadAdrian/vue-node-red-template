@@ -1,6 +1,5 @@
 *.backup
 node_modules
-flows*
 .config*
 lib
 uibuilder/ui

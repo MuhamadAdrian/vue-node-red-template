@@ -1,0 +1,92 @@
+[
+    {
+        "id": "406c829c9fec37ae",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "363e6446b3f59855",
+        "type": "inject",
+        "z": "406c829c9fec37ae",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "e4252f992abaf4fe"
+            ]
+        ]
+    },
+    {
+        "id": "0c41891f0f206263",
+        "type": "debug",
+        "z": "406c829c9fec37ae",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "749605d0b9f60bf9",
+        "type": "comment",
+        "z": "406c829c9fec37ae",
+        "name": "Please dont remove the dashboard node. And if you want to delete this node. Dont delete the folder too",
+        "info": "Please dont remove the dashboard node. And if you want to delete this node. Dont delete the folder too",
+        "x": 590,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e4252f992abaf4fe",
+        "type": "uibuilder",
+        "z": "406c829c9fec37ae",
+        "name": "",
+        "topic": "",
+        "url": "dashboard",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "dist",
+        "deployedVersion": "6.4.1",
+        "showMsgUib": false,
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "0c41891f0f206263"
+            ],
+            []
+        ]
+    }
+]

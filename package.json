@@ -7,14 +7,16 @@
     "uibuilder/*"
   ],
   "scripts": {
-    "build": "lerna run build",
-    "build:watch": "lerna run build:watch",
+    "build:client": "lerna run build",
+    "build:client:watch": "lerna run build:watch",
     "dev": "node-red --p 1881 -u ./ --settings"
   },
   "dependencies": {
-    "node-red-contrib-uibuilder": "^6.4.1"
+    "node-red-contrib-uibuilder": "^6.4.1",
+    "node-red-node-mysql": "^1.0.3",
+    "node-red-node-random": "^0.4.1"
   },
   "devDependencies": {
-    "lerna": "^7.0.0"
+    "lerna": "^7.0.1"
   }
 }

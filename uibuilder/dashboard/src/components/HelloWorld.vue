@@ -1,41 +1,60 @@
 <script setup lang="ts">
-import { ref, inject } from 'vue'
-import IData from '../interface/IData'
+import { inject, ref } from 'vue'
+import type IData from '../interface/IData'
 
 defineProps<{
-  msg: String,
+  msg: String
 }>()
 
 // inject method 'send2NR' from plugin uibuilderPlugin
-const send2NR = inject('send2NR') as (topic: string, payload:string) => void;
+const send2NR = inject('send2NR') as (topic: string, payload: string) => void
 
-const asyncData = inject('asyncData') as IData;
+const asyncData = inject('asyncData') as IData
 
-const topic = ref('');
+const topic = ref('')
 
-const payload = ref('');
+const payload = ref('')
 
-const count = ref(0);
-
+const count = ref(0)
 </script>
 
 <template>
- <h1>{{ msg }} </h1>
- <div class="container">
-   <div class="box">
+  <h1>{{ msg }} </h1>
+  <div class="container">
+    <div class="box">
       <h2>Received</h2>
-      <input class="box-topic" readonly type="text" placeholder="Received Topic"  v-model="asyncData.topic"/>
-      <textarea class="box-message" readonly type="text" placeholder="Received Payload" v-model="asyncData.payload" />
+      <input
+        v-model="asyncData.topic"
+        class="box-topic"
+        readonly
+        type="text"
+        placeholder="Received Topic"
+      >
+      <textarea
+        v-model="asyncData.payload"
+        class="box-message"
+        readonly
+        type="text"
+        placeholder="Received Payload"
+      />
     </div>
     <div class="box">
       <h2>Send</h2>
-      <input class="box-topic" type="text" placeholder="type topic" v-model="topic"/>
-      <textarea class="box-message" type="text" placeholder="press enter to send" v-model="payload" @keyup.enter="send2NR(topic, payload)"/>
+      <input v-model="topic" class="box-topic" type="text" placeholder="type topic">
+      <textarea
+        v-model="payload"
+        class="box-message"
+        type="text"
+        placeholder="press enter to send"
+        @keyup.enter="send2NR(topic, payload)"
+      />
     </div>
   </div>
-  <br/>
-  <br/>
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <br>
+  <br>
+  <button type="button" @click="count++">
+    count is: {{ count }}
+  </button>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -61,7 +80,6 @@ const count = ref(0);
 a {
   color: #42b983;
 }
-
 
 .container {
   display: inline;

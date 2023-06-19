@@ -1,4 +1,13 @@
 {
   "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin"],
-  "typescript.preferences.autoImportFileExcludePatterns": ["vue-router"]
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+  // "i18n-ally.localesPaths": ["locales"],
+  // "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
+  // "files.associations": {
+  //   "*.css": "tailwindcss"
+  // }
 }

@@ -3,4 +3,4 @@ interface IData {
   payload: string
 }
 
-export default IData;
+export default IData
